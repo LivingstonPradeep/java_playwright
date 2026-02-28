@@ -1,0 +1,5 @@
+1. Navigate to Espncricinfo URL
+2. Refuse all cookies if the popup is visible
+3. Get the list of all matches that are available
+4. Filter out only the matches that are complete
+5. Print the winners of each match

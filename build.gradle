@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(23)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Standard Playwright Java implementation
+    implementation 'com.microsoft.playwright:playwright:1.49.0'
+}
+test {
+    useJUnitPlatform()
+    // Sets the number of parallel test processes Gradle can start
+    // Using half your CPU cores is a common stable starting point
+    maxParallelForks = Runtime.runtime.availableProcessors().intdiv(2) ?: 1
+}
